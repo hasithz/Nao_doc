@@ -1,8 +1,8 @@
-# Example: Basic MkDocs project for Read the Docs
+# NAO DOCS
 
-[![Documentation Status](https://readthedocs.org/projects/example-mkdocs-basic/badge/?version=latest)](https://example-mkdocs-basic.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/example-mkdocs-basic/badge/?version=latest)](https://https://github.com/hasithz/Nao_doc/?badge=latest)
 
-This example shows a basic MkDocs project with Read the Docs. You're encouraged to view it to get inspiration and copy & paste from the files in the source code. If you are using Read the Docs for the first time, have a look at the official [Read the Docs Tutorial](https://docs.readthedocs.io/en/stable/tutorial/index.html).
+This document provides how to Nao robt was used to interact with children in order to develop the child robot interaction as well as how we meassured the improvements with the child - robot interaction sessions. You can find the relavent scripts on [Nao development lib](https://github.com/hasithz/CSAAT_Nao).
 
 📚 [docs/](https://github.com/readthedocs-examples/example-mkdocs-basic/blob/main/docs/)<br>
 A basic MkDocs project lives in `docs/`, it was generated using MkDocs defaults. All the `*.md` make up sections in the documentation.
