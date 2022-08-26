@@ -1,6 +1,9 @@
 # familiarizing with the environment
 
 
+The first thing you need to do is to familiarize hild with the environment. In order to familiarize with the environment we have developed a script where the robot ask some questions from the child. The questions are related to the environment and the child will be able to answer the questions. The robot will be able to understand the answers and will be able to respond to the robot. The script is as follows.
+
+
 | No                                                                                | Question/ Request                                                    | expected answer action                                    | models | realtime                     | NAO's action                                   | Proposed input to model           | Expected output from model                        | Comments |
 | --------------------------------------------------------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------- | ------ | ---------------------------- | ---------------------------------------------- | --------------------------------- | ------------------------------------------------- | -------- |
 |                                                                                   |                                                                      |                                                           |        |                              |                                                |                                   |                                                   |          |
