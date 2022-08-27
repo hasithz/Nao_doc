@@ -6,11 +6,11 @@ The first thing you need to do is to familiarize hild with the environment. In o
  **No** | **Question/ Request** | **expected answer action** | **models** | **realtime** | **NAO's action** | **Proposed input to model** | **Expected output from model** | **Comments** 
 ---|---|---|---|---|---|---|---|---
  1 | හෙලෝ "........." මේ පැත්ත බලන්න (Name Calling) | Child looks at NAO | Gaze | Yes | "Greet him by the name 
-  (හෙලෝ ""…......"")" | Session Video Footage | probability of child maintaining gaze with NAO |  
+  ||(හෙලෝ ""…......"")" | Session Video Footage | probability of child maintaining gaze with NAO |  
   |  |  |  |  |  |  |  |  
  1.01 | බබා ඔයාගේ නම මොකද්ද? | "…............." (Telling only the name) | Speech | Yes | Random hand gesture/ Body movement | "…............." (Responded name) | True/False - Child answered correctly or not? |  
   |  | මගේ නම "…......." (Child will respond by name) |  |  |  | "Child's answer  
-  (මගේ නම ""…......."")" |  |  
+ || (මගේ නම ""…......."")" |  |  
   |  | Other random answer |  |  |  | Other random answer | True/False - Child answered correctly or not? |  
   |  | Staty silent |  |  |  | Q&A session audio recording | Not answered |  
   |  | Child should maintain eye-gaze with NAO | Gaze | Yes |  | Q&A session video footage | probability of child maintaining gaze with NAO |  
