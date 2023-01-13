@@ -36,9 +36,9 @@ in order to track the progress of the robot a state machine was created.
 ## state structure 
 
 a state class was created in order to maintain a proper structure and it included 
-> id number
-> name 
-> what should be the output from the state
+> - id number
+> - name 
+> - what should be the output from the state
 
 this was created to have have with these funtions on it
 
