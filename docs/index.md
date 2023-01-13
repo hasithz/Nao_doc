@@ -12,3 +12,7 @@ Check out the [usage](usage) section for further information, including how to [
 
     This project is under active development.
 
+
+
+[![Documentation Status](https://readthedocs.org/projects/nao-doc/badge/?version=latest)](https://nao-doc.readthedocs.io/en/latest/?badge=latest)
+      
