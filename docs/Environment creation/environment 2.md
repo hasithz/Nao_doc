@@ -32,3 +32,5 @@ and the task completion was divided into 4 pars as well
 
 
 ## 1st environment
+
+By changing how the observation get rewarded will allow us to differentiate the outcome of the action to be selected by the model.
