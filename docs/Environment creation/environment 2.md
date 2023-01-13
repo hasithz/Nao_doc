@@ -1,4 +1,4 @@
-# Basic Environment
+# Nao Basic Environment
 
 The concept is to identify the best possible action by looking at the test subject.
 The goal is to keep the engagement with with test subject all the time and ask the best suitable question from the test subject in order to maximize the attention.
