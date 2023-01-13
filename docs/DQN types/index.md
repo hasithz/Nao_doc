@@ -1,4 +1,4 @@
-# DQN 
+# Introduction to DQN 
 
 DQN (Deep Q-Network) is a type of neural network architecture used for solving reinforcement learning tasks. It combines a traditional Q-learning algorithm with a deep neural network, allowing the model to learn from high-dimensional sensory input. DQNs have been used to achieve state-of-the-art performance on a wide range of Atari games and are a popular choice for training agents in various simulated environments. An important extension of DQN is the Double DQN, which is used to reduce the over-estimation of action values.
 

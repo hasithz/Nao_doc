@@ -16,6 +16,18 @@ Environment contains 5 main parts
 - render
 - close
 
+
+Define the environment's observation and action spaces. The observation space defines the format of the observations that the agent will receive, and the action space defines the format of the actions that the agent can take.
+
+Implement the step() method, which takes an action as an input and returns the next observation, the reward, a Boolean indicating whether the episode has ended, and any additional information.
+
+Optionally, implement the reset() method, which returns the initial observation when the environment is reset.
+
+Optionally, implement the render() method, which displays the current state of the environment.
+
+Create an instance of the Environment class and register it with Gym by calling gym.envs.register()
+
+
 ```python
 import gym
 import numpy as np
