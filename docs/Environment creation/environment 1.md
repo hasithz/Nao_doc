@@ -1,6 +1,8 @@
 
 # Basic Environment
 
+in this section you will understand of how to create a basic environemnt from scratch using openai gym library
+
 ## Creating a custom env
 
 This is the basic environment that was created and in order to create a basic environment and as well

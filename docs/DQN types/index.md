@@ -1,0 +1,11 @@
+# DQN 
+
+DQN (Deep Q-Network) is a type of neural network architecture used for solving reinforcement learning tasks. It combines a traditional Q-learning algorithm with a deep neural network, allowing the model to learn from high-dimensional sensory input. DQNs have been used to achieve state-of-the-art performance on a wide range of Atari games and are a popular choice for training agents in various simulated environments. An important extension of DQN is the Double DQN, which is used to reduce the over-estimation of action values.
+
+In reinforcement learning, an agent interacts with an environment and learns to make decisions that maximize a reward signal. One popular approach to solving RL problems is Q-learning, which estimates the value of each possible action in a given state, or state-action value function, also known as Q-value. The Q-value represents the expected future reward for taking a certain action in a certain state, and the agent chooses the action with the highest Q-value at each step.
+
+DQNs extend the traditional Q-learning algorithm by approximating the Q-value function with a deep neural network. This allows the agent to learn from high-dimensional sensory input, such as image or video data, instead of having to hand-engineer a set of features. The neural network is trained to predict the Q-values for a given state and action, using a variant of supervised learning called Q-learning.
+
+A key aspect of DQNs is the use of a technique called experience replay, which stores a replay buffer of past experience and randomly samples from it to update the network. This decorrelates the observations and improves the stability of the learning process. Additionally, DQNs use a technique called fixed Q-targets, in which the network's parameters are updated to reduce the difference between the predicted Q-values and the target Q-values, computed by a separate network.
+
+The DQN algorithm was first introduced in a 2013 paper by Mnih et al. and was able to achieve human-level performance on a number of Atari games. Since then, DQNs have been used in various simulated environments and other reinforcement learning tasks, and have been extended in several ways, such as Double DQN, Dueling DQN, and Prioritized Experience Replay.
