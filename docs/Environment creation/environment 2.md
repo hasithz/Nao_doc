@@ -61,10 +61,10 @@ class State:
         self.task = task
         return self.gaze, self.distance, self.task
 
-    def work(self, fuctions:List[callable]) -> None:
+    def work(self, functions:List[callable]) -> None:
         ret = []
-        for fuction in fuctions:
-            _ret = fuction()
+        for function in functions:
+            _ret = function()
             ret.append(_ret)
         return ret
 
