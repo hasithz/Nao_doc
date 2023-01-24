@@ -48,3 +48,27 @@ task was divided into 4 main parts
 | 2   | week performance |
 | 3   | no performance (not responding) |
 
+# creating a player
+
+in order to create a player player class should be called.
+
+```python
+
+    Player(self,player_id:int=0, player_type =0 , prob = [[0.1, 0.9],
+                                                                [0.1, 0.9],
+                                                                [0.8, 0.1, 0.1, 0.0]])
+```
+
+
+```python
+
+from players.player3 import Player as Player
+
+player1 = Player()
+ret = player1.generate(prob = [[0.1, 0.9],
+                        [0.1, 0.9],
+                        [0.8, 0.1, 0.1, 0.0]] )
+
+print(ret)
+
+```
