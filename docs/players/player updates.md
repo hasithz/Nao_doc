@@ -31,6 +31,7 @@ this represent do the player maintain the gaze with the robot.
 #### distance 
 
 as save as the above in the gaze 
+
 | value | observation |
 | --------- | -------------------------------------------------- |
 | 0   | not maintaining the observation correctly or out of focus  |
