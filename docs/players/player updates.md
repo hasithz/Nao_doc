@@ -22,8 +22,9 @@ this was constructed into 3 main parts
 
 #### gaze 
 this represent do the player maintain the gaze with the robot.
+
 | value | observation |
-| --------- | ------- |
+| --------- | -------------------------------------------------- |
 | 0   | not maintaining the observation correctly or out of focus  |
 | 1   | maintaining the observation with the robot |
 
@@ -31,7 +32,7 @@ this represent do the player maintain the gaze with the robot.
 
 as save as the above in the gaze 
 | value | observation |
-| --------- | ------- |
+| --------- | -------------------------------------------------- |
 | 0   | not maintaining the observation correctly or out of focus  |
 | 1   | maintaining the observation with the robot |
 
