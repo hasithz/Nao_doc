@@ -69,3 +69,12 @@ ret = player1.generate(prob = [[0.1, 0.9],
 
 print(ret)
 ```
+
+setting up epsilon values for each player can be done, in order to setup the epsilon values 
+
+```python
+player = Player..epsilon_fn(frame_idx:int = None)
+
+
+
+```
