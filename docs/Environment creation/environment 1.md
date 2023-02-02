@@ -62,7 +62,6 @@ class CustomEnv(gym.Env):
 
     def close(self):
         ...
-}
 ```
 
 this was used as the basic structure to create the Nao trainning environment.
