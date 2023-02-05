@@ -124,5 +124,5 @@ class GRU_cell_AI_SUMMER(torch.nn.Module):
 ```
 
 !!! note 
-    [github](https://github.com/The-AI-Summer/RNN_tutorial/blob/master/notebooks/custom_LSTM_RNN_AI_summer_experiment.ipynb)
+    here you will find a time series data prediction [github](https://github.com/The-AI-Summer/RNN_tutorial/blob/master/notebooks/custom_LSTM_RNN_AI_summer_experiment.ipynb)
     <!-- https://github.com/The-AI-Summer/RNN_tutorial/blob/master/notebooks/custom_LSTM_RNN_AI_summer_experiment.ipynb -->
