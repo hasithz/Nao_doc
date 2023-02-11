@@ -328,3 +328,99 @@ class PointerNet(nn.Module):
 
         return  outputs, pointers
 ```
+
+
+### pointer net example code 
+
+```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+class Encoder(nn.Module):
+    def __init__(self, input_dim, hidden_dim):
+        super(Encoder, self).__init__()
+        self.fc = nn.Linear(input_dim, hidden_dim)
+
+    def forward(self, x):
+        x = self.fc(x)
+        return x
+
+class Attention(nn.Module):
+    def __init__(self, hidden_dim):
+        super(Attention, self).__init__()
+        self.fc = nn.Linear(hidden_dim, 1)
+
+    def forward(self, encoder_outputs, decoder_hidden):
+        scores = self.fc(encoder_outputs)
+        scores = scores.squeeze(2)
+        scores = F.softmax(scores, dim=0)
+        context = (encoder_outputs * scores.unsqueeze(2)).sum(dim=0)
+        return context, scores
+
+class Decoder(nn.Module):
+    def __init__(self, hidden_dim, output_dim):
+        super(Decoder, self).__init__()
+        self.fc = nn.Linear(hidden_dim, output_dim)
+
+    def forward(self, x, context):
+        x = torch.cat([x, context], dim=1)
+        x = self.fc(x)
+        return x
+
+class PointerNetwork(nn.Module):
+    def __init__(self, input_dim, hidden_dim, output_dim):
+        super(PointerNetwork, self).__init__()
+        self.encoder = Encoder(input_dim, hidden_dim)
+        self.attention = Attention(hidden_dim)
+        self.decoder = Decoder(hidden_dim, output_dim)
+
+    def forward(self, x, target_indices=None):
+        encoder_outputs = self.encoder(x)
+        decoder_input = torch.zeros(encoder_outputs.size(0), 1, dtype=torch.float32)
+        decoder_hidden = encoder_outputs.mean(dim=0).unsqueeze(0)
+        outputs = []
+        scores = []
+        for i in range(encoder_outputs.size(0)):
+            context, score = self.attention(encoder_outputs, decoder_hidden)
+            decoder_output = self.decoder(decoder_input, context)
+            outputs.append(decoder_output)
+            decoder_hidden = decoder_output
+            decoder_input = decoder_output
+            scores.append(score)
+        outputs = torch.cat(outputs, dim=0)
+        scores = torch.cat(scores, dim=0)
+        if target_indices is not None:
+            loss = F.cross_entropy(scores.transpose(0, 1), target_indices)
+            return outputs, loss
+        else:
+            _, predicted_indices = scores.max(dim=1)
+            return outputs, predicted_indices
+
+# Load the input data
+input_data = torch.randn(10, 3)
+
+# Load the target indices
+target_indices = torch.tensor([1, 3, 5, 7, 9, 1, 3, 5, 7, 9])
+
+# Initialize the Pointer Network
+pointer_network = PointerNetwork(input_dim=3, hidden_dim=5, output_dim=1)
+
+# Define the optimizer
+optimizer = torch.optim.Adam(pointer_network.parameters(), lr=0.001)
+
+# Train the network
+for epoch in range(100):
+    outputs, loss = pointer_network(input_data, target_indices)
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+    if (epoch + 1) % 10 == 0:
+        print('Epoch [{}/100], Loss: {:.4f}'.format(epoch + 1, loss.item()))
+
+# Use the trained network to make predictions
+outputs, predicted_indices = pointer_network(input_data)
+print('Predicted indices: ', predicted_indices)
+
+```
+
