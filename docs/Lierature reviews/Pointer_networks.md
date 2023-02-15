@@ -9,9 +9,6 @@ The architecture of the Pointer Network consists of an encoder network and a dec
 The Pointer Network was introduced by Vinyals et al. in their 2015 paper "Pointer Networks." The architecture has since become a popular choice for tasks that require the generation of sequences based on input sequences.
 
 
-
-
-
 ## Implementation 
 
 ```python
@@ -23,7 +20,7 @@ import torch.nn.functional as F
 
 class Encoder(nn.Module):
     """
-    Encoder class for Pointer-Net
+    Encoder class for Pointer-Net 
     """
 
     def __init__(self, embedding_dim,
